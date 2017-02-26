@@ -1,0 +1,43 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  	"build": "tsc -p ./",
+    "build:watch": "tsc -p ./ -w",
+    "build:e2e": "tsc -p e2e/",
+    "serve": "lite-server -c=bs-config.json",
+    "serve:e2e": "lite-server -c=bs-config.e2e.json",
+  	"start": "concurrently \"npm run build:watch\" \"npm run serve\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint ./src/**/*.ts -t verbose"
+  },
+  "author": "",
+  "license": "MIT",
+   "dependencies": {
+    "@angular/common": "~2.4.0",
+    "@angular/compiler": "~2.4.0",
+    "@angular/core": "~2.4.0",
+    "@angular/forms": "~2.4.0",
+    "@angular/http": "~2.4.0",
+    "@angular/platform-browser": "~2.4.0",
+    "@angular/platform-browser-dynamic": "~2.4.0",
+    "@angular/router": "~3.4.0",
+
+    "angular-in-memory-web-api": "~0.2.4",
+    "systemjs": "0.19.40",
+    "core-js": "^2.4.1",
+    "rxjs": "5.0.1",
+    "zone.js": "^0.7.4"
+  },
+  "devDependencies": {
+    "concurrently": "^3.2.0",
+    "lite-server": "^2.2.2",
+    "typescript": "~2.0.10",
+    "canonical-path": "0.0.2",
+    "tslint": "^3.15.1",
+    "lodash": "^4.16.4",
+    "@types/node": "^6.0.46"
+  }
+}
