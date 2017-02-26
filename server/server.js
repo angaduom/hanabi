@@ -13,7 +13,7 @@ var io =  require('socket.io').listen(server);
 //on a connection from a client do these things
 io.on('connection',function(socket){
 	console.log("A client connected");
-	//creating socket for contact
+	
 	socket.on('contact',function(data){
 		console.log('server side ',data);
 		socket.emit('contact','wassssuppp');
